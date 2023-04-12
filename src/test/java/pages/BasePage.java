@@ -53,16 +53,18 @@ public class BasePage {
 
     }
 
-
     public boolean isFemeiCategoryDisplayed() {
+
         return true;
     }
 
     public boolean isBarbatiCategoryeDisplayed() {
-    return true;
+
+        return true;
     }
 
     public boolean isCasaCategoryDisplayed() {
-    return true;
+
+        return true;
     }
 }

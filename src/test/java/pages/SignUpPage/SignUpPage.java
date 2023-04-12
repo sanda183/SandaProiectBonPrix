@@ -20,13 +20,7 @@ public class SignUpPage extends BasePage {
     }
 //HomePage
 private final By logo = By.id("logo Bonprix");//locator bun
-
-
-
-
-
-
-
+private final By title = By.id("logo Bonprix");
 
 
 
@@ -34,7 +28,10 @@ private final By logo = By.id("logo Bonprix");//locator bun
         LOG.info("Verify if LogoisDisplayed");
         return driver.findElement(logo).isDisplayed();
     }
-
+    public boolean isTitleDisplayed(){
+        LOG.info("Verify if TitleisDisplayed");
+        return driver.findElement(title).isDisplayed();
+}
 
 
 }

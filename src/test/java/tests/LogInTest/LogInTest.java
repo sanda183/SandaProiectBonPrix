@@ -1,19 +1,21 @@
 package tests.LogInTest;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import pages.LogInPage.LogInPage;
 
 import java.util.concurrent.TimeUnit;
 
+import static pages.BasePage.getBaseUrl;
+
 public class LogInTest {
     private static final Logger LOG = LoggerFactory.getLogger(LogInTest.class);
+    private String newUrl = getBaseUrl() + "LogIn.html";
 
 
     @BeforeClass
@@ -31,24 +33,24 @@ public class LogInTest {
         WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
     }
 
-    @Test
+    String email = "Marincassanda@yahoo.com";
+    String password = "18031990";
+  @Test
+public void login() {
+  LOG.info("Click Contul Meu Icon");
+  loginPage.clickContulMeuIcon;
 
-    public void LogInTest() {
-    private WebDriver driver = null;
+ LOG.info("Type In Email");
+ loginPage.typeInEmail(email);
 
+ LOG.info("Click Mai Departe Button1");
+    loginPage.clickMaiDeparteButton1;
 
-        // Click on "Contul meu"
-        WebElement myAccountLink = driver.findElement(By.xpath("//a[@aria-label='Contul meu']")).click();
+  LOG.info("Type In Password")
+  loginPage.typeInPassword(password);
 
-        // Fill out login form
-        WebElement acceptbar = driver.findElement(By.id("JOISH987_acceptAllBar_btn")).click();
-        WebElement emailInput = driver.findElement(By.name("email")).sendKeys(new CharSequence[]{"test@gmail.com"});
-        WebElement maideparte = driver.findElement(By.xpath("//form[@class='login-form-email']//span[@class='btn__slots'][normalize-space()='Mai departe']")).click();
-        WebElement passwordInput = driver.findElement(By.xpath("/html/body/div[1]/div/div/main/div/div[1]/div[2]/div/form/div[2]/div/div/div/input")).sendKeys(new CharSequence[]{"Password@123"});
-        WebElement submitbtn = driver.findElement(By.cssSelector("div[class='login-logger__inner'] div form[class='login-form-register'] span[class='btn__slots']")).click();
-
-
-    }
+   LOG.info("Click Mai Departe Button Final");
+    loginPage.clickMaiDeparteButtonFinal;
 
 
 }

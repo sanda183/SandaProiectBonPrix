@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
-
+import static pages.BasePage.driver;
 public class ProductSearchPage extends BasePage {
     public static final Logger LOG = LoggerFactory.getLogger(pages.ProductSearch.ProductSearchPage.class);
     public static pages.ProductSearch.ProductSearchPage instance;
@@ -17,6 +17,9 @@ public class ProductSearchPage extends BasePage {
             instance = new ProductSearchPage();
         }
         return instance;
+    }
+
+    public static void typeProduct() {
     }
 
     public static class ProductSearchTest {
@@ -34,19 +37,36 @@ public class ProductSearchPage extends BasePage {
             WebDriver driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.get("https://www.bonprix.ro/");
-            driver.findElement(By.xpath("//div[@class='header__search']//div//input[@name='searchText']")).sendKeys(new CharSequence[]{"Rochie" + Keys.ENTER});
             Thread.sleep(10000L);
             driver.quit();
         }
 
+        private By searchBar = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//searchbar
+        private By searchProduct  = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//insertprodctsearch
 
-        public static String[] getArgs() {
-            return args;
-        }
-
-        public static void setArgs(String[] args) {
-            ProductSearchTest.args = args;
-        }
     }
+
+    public void clickSearchBar(){
+        LOG.info("Click Search Bar");
+        driver.findElement(searchBar).click();
+    }
+    public void typeInProductYouAreSearching(){
+        LOG.info("Search a Product");
+        driver.findElement(searchProduct).sendKeys(new CharSequence[]{"Rochie" + Keys.ENTER});
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
