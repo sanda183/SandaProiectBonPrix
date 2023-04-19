@@ -2,7 +2,6 @@ package pages.Bascket;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
@@ -27,13 +26,6 @@ public class BascketPage extends BasePage {
 
     }
 
-    public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "C:\\Webdriver\\chromedriver111.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.bonprix.ro/");
-    }
-
     private By ContulMeuIcon = By.xpath("//a[@aria-label='Contul meu']");
     private By InputEmailField = By.xpath("//input[@type='email']");
     private By MaiDeparteButton = By.xpath("//form[@class='login-form-email']//span[@class='btn__slots'][normalize-space()='Mai departe']");
@@ -52,7 +44,7 @@ public class BascketPage extends BasePage {
 
     //Log In My Account
 
-    public void clickContulMeu() {
+    public void clickContulMeuIcon() {
         LOG.info("Click the Contul meu Icon");
         driver.findElement(ContulMeuIcon).click();
     }
@@ -69,7 +61,7 @@ public class BascketPage extends BasePage {
 
     public void typeInPasswordField(String password) {
         LOG.info("Type in Password Field");
-        driver.findElement(InputPasswordField).sendKeys(String password);
+        driver.findElement(InputPasswordField).sendKeys(password);
     }
 
     public void clickMaiDeparteButtonFinal() {
@@ -94,7 +86,7 @@ public class BascketPage extends BasePage {
 
     public boolean IsSearchResultDisplayed() {
         LOG.info("Verify if SearchResult is Displayed");
-        driver.findElement(SearchResult).isDisplayed();
+       return driver.findElement(SearchResult).isDisplayed();
     }
     public void clickItemGeantaPai() {
         LOG.info("Click Geanta Pai");

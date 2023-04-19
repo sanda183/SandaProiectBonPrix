@@ -13,7 +13,7 @@ public class RegisterTest extends BaseTest {
     private static final Logger LOG = LoggerFactory.getLogger(RegisterTest.class);
     private String newUrl = getBaseUrl() + "Register.html";
 
-    String email = "Marincassanda2yahoo.com"
+    String email = "Marincassanda@yahoo.com";
     String email1 = "Sandutza183@icloud.com";
     String password = "18031990";
     String prenume = "Sanda";
@@ -24,7 +24,8 @@ public class RegisterTest extends BaseTest {
 
     @Test
     public void register() {
-
+        LOG.info ("Click Cookies");
+        registerPage.clickcookiesButton();
         LOG.info("Click Contul Meu Icon");
         registerPage.clickContulMeuIcon();
 

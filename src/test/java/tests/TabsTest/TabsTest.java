@@ -9,22 +9,19 @@ import tests.BaseTest;
 import static pages.BasePage.getBaseUrl;
 
 
-    public class TabsTest extends BaseTest {
+public class TabsTest extends BaseTest {
     private static final Logger LOG = LoggerFactory.getLogger(tests.RegisterTest.RegisterTest.class);
-
     private final String newUrl = getBaseUrl() + "Register.html";
 
-        @Test
+    @Test
     public void Tabs() {
         LOG.info("Check Femei");
-        Assert.assertTrue(registerPage.isFemeiCategoryDisplayed());
+        Assert.assertTrue(tabsPage.isFemeiCategoryDisplayed());
         LOG.info("Check Barbati");
-        Assert.assertTrue(registerPage.isBarbatiCategoryeDisplayed());
+        Assert.assertTrue(tabsPage.isBarbatiCategoryDisplayed());
         LOG.info("Check Casa");
-        Assert.assertTrue(registerPage.isCasaCategoryDisplayed());
+        Assert.assertTrue(tabsPage.isCasaCategoryDisplayed());
     }
-
-
 
 
 }

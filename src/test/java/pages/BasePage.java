@@ -25,8 +25,6 @@ public class BasePage {
     }
 
     public static void tearDown() {
-
-
         LOG.info("Close the browser");
         driver.quit();
     }
@@ -51,20 +49,5 @@ public class BasePage {
         }
 
 
-    }
-
-    public boolean isFemeiCategoryDisplayed() {
-
-        return true;
-    }
-
-    public boolean isBarbatiCategoryeDisplayed() {
-
-        return true;
-    }
-
-    public boolean isCasaCategoryDisplayed() {
-
-        return true;
     }
 }

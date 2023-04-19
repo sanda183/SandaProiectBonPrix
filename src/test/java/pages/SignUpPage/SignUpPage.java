@@ -18,20 +18,18 @@ public class SignUpPage extends BasePage {
         }
         return instance;
     }
-//HomePage
-private final By logo = By.id("logo Bonprix");//locator bun
-private final By title = By.id("logo Bonprix");
+
+    //HomePage
+    private final By logo = By.id("logo Bonprix");//locator gresit
 
 
 
-    public boolean isLogoDisplayed() {
-        LOG.info("Verify if LogoisDisplayed");
-        return driver.findElement(logo).isDisplayed();
-    }
-    public boolean isTitleDisplayed(){
-        LOG.info("Verify if TitleisDisplayed");
-        return driver.findElement(title).isDisplayed();
-}
+//    public boolean isLogoDisplayed() {
+//        LOG.info("Verify if LogoisDisplayed");
+//        return driver.findElement(logo).isDisplayed();
+//    }
+
+
 
 
 }
