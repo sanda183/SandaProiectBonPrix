@@ -13,7 +13,7 @@ public class RegisterTest extends BaseTest {
     private static final Logger LOG = LoggerFactory.getLogger(RegisterTest.class);
     private String newUrl = getBaseUrl() + "Register.html";
 
-    String email = "Marincassanda@yahoo.com";
+
     String email1 = "Sandutza183@icloud.com";
     String password = "18031990";
     String prenume = "Sanda";
@@ -24,13 +24,17 @@ public class RegisterTest extends BaseTest {
 
     @Test
     public void register() {
-        LOG.info ("Click Cookies");
-        registerPage.clickcookiesButton();
+//        LOG.info ("Click Cookies");
+//        registerPage.clickcookiesButton();
+
         LOG.info("Click Contul Meu Icon");
         registerPage.clickContulMeuIcon();
 
         LOG.info("Type In Email");
         registerPage.typeInEmailField1(email1);
+
+        LOG.info("Click Mai Departe Button1");
+        registerPage.clickMaiDeparteButton1();
 
         LOG.info("Type In EmailField2");
         registerPage.typeInEmailField2(email1);
@@ -53,7 +57,7 @@ public class RegisterTest extends BaseTest {
         LOG.info("Click the Politica Confidentialitate CheckBox");
         registerPage.clickPoliticaConfidentialitateCheckBox();
 
-        LOG.info("Click the Mai Departe Button Final");
+        LOG.info("Click Mai Departe Button Final");
         registerPage.clickMaiDeparteButtonFinal();
 
 

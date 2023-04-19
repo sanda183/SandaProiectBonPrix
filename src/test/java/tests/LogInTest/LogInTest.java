@@ -17,15 +17,21 @@ public class LogInTest extends BaseTest {
 
     @Test
     public void login() {
-        logInPage.clickcookiesButton();
+//        LOG.info("Click Cookies Button");
+//        logInPage.clickcookiesButton();
+
         LOG.info("Click Contul Meu Icon");
         logInPage.clickContulMeuIcon();
+
         LOG.info("Type In Email");
         logInPage.typeInEmailField(email);
+
         LOG.info("Click Mai Departe Button1");
         logInPage.clickMaiDeparteButton();
+
         LOG.info("Type In Password");
         logInPage.typeInPasswordField(password);
+
         LOG.info("Click Mai Departe Button Final");
         logInPage.clickMaiDeparteButtonFinal();
 

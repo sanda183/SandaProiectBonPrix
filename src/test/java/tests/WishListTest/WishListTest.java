@@ -3,17 +3,14 @@ package tests.WishListTest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
-import pages.LogInPage.LogInPage;
 import tests.BaseTest;
 
 import static org.testng.Assert.assertTrue;
 import static pages.BasePage.getBaseUrl;
-
 public class WishListTest extends BaseTest {
 
     private static final Logger LOG = LoggerFactory.getLogger(WishListTest.class);
-    private static final pages.LogInPage.LogInPage logInPage = new LogInPage();
-    private String newUrl = getBaseUrl() + "Wishlist.html";
+    private String newUrl = getBaseUrl() + "/wishlist/";
     String email = "Marincassanda@yahoo.com";
     String password = "18031990";
 
@@ -21,6 +18,7 @@ public class WishListTest extends BaseTest {
     @Test
 
     public void Login() {
+       //driver.get(newUrl);
         LOG.info("Click Contul Meu Icon");
         wishListPage.clickContulMeuIcon();
 

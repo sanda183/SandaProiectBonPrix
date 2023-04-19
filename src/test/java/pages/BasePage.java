@@ -14,7 +14,7 @@ public class BasePage {
 
     public static void setUp() {
         LOG.info("Start test");
-        System.setProperty("webdriver.chrome.driver", "C:\\Webdriver\\chromedriver111.exe");
+        System.setProperty("webdriver.chrome.driver", "C://Webdriver/chromedriver112.exe.exe");
         driver = new ChromeDriver();
         String url = "https://www.bonprix.ro/";
         driver.get(url);
@@ -30,7 +30,7 @@ public class BasePage {
     }
 
     public static String returnBaseUrl() {
-        return "https://www.bonprix.ro/";
+        return "https://www.bonprix.ro";
     }
 
     public static String getBaseUrl() {

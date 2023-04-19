@@ -31,6 +31,7 @@ public class WishListPage extends BasePage {
     private By WishListIcon = By.xpath("//a[@href='/wishlist/']");
     private By ProductInWishList = By.xpath("//a[@class='wishlist-item__name']");//produse din wishlist
     private By Wishlistsection = By.xpath("//a[@class='wishlist-item__name']");
+
     //Log In My Account
 
     public void clickContulMeuIcon() {
@@ -64,6 +65,10 @@ public class WishListPage extends BasePage {
     }
     //Check wishlist
 
+    public boolean isWishlistSectionDisplayedDisplayed(){
+        LOG.info("Is wishlist section Displayed");
+        return driver.findElement(Wishlistsection).isDisplayed();
+    }
     public void clickWishlistIcon() {
         LOG.info("Click wihlist icon");
         driver.findElement(WishListIcon).click();
@@ -74,10 +79,7 @@ public class WishListPage extends BasePage {
         driver.findElement(Wishlistsection);
     }
 
-public boolean isWishlistSectionDisplayedDisplayed(){
-        LOG.info("Is wishlist section Displayed");
-        return driver.findElement(Wishlistsection).isDisplayed();
-}
+
 }
 
 

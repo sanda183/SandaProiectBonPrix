@@ -7,12 +7,12 @@ import pages.BasePage;
 import pages.LogInPage.LogInPage;
 import pages.ProductSearch.ProductSearchPage;
 import pages.RegisterPage.RegisterPage;
-import pages.SignUpPage.SignUpPage;
+
 import pages.Tabs.TabsPage;
 import pages.Wishlist.WishListPage;
 
 public class BaseTest {
-    public SignUpPage signUpPage = new SignUpPage();
+
     public RegisterPage registerPage = RegisterPage.getInstance();
     public LogInPage logInPage = LogInPage.getInstance();
     public TabsPage tabsPage = TabsPage.getInstance();

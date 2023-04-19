@@ -30,7 +30,7 @@ public class LogInPage extends BasePage {
         driver.get("https://www.bonprix.ro/");
         WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
     }
-    private By cookiesButton = By.id("JOISH987_acceptAllBar_btn");
+    //private By cookiesButton = By.id("JOISH987_acceptAllBar_btn");
     private By ContulMeuIcon = By.xpath("//a[@aria-label='Contul meu']");
     private By InputEmailField = By.id("//input[@type='email']");
     private By MaiDeparteButton = By.xpath("//form[@class='login-form-email']//span[@class='btn__slots'][normalize-space()='Mai departe']");
@@ -38,10 +38,10 @@ public class LogInPage extends BasePage {
     private By MaiDeparteButtonFinal = By.xpath("div[class='login-logger__inner'] div form[class='login-form-register'] span[class='btn__slots']");
 
 
-    public void clickcookiesButton(){
-        LOG.info("Click cookies");
-        driver.findElement(cookiesButton).click();
-    }
+//    public void clickcookiesButton(){
+//        LOG.info("Click cookies");
+//        driver.findElement(cookiesButton).click();
+//    }
     public void clickContulMeuIcon() {
         LOG.info("Click the Contul meu Icon");
         driver.findElement(ContulMeuIcon).click();

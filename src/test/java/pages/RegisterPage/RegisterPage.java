@@ -19,7 +19,7 @@ public class RegisterPage extends BasePage {
         return instance;
     }
 
-    private By cookiesButton = By.id("JOISH987_acceptAllBar_btn");
+    //private By cookiesButton = By.id("JOISH987_acceptAllBar_btn");
     private By ContulMeuIcon = By.xpath("//a[@aria-label='Contul meu']");
     private By EmailField1 = By.xpath("//input[@type='email']");
     private By EmailField2 = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/input[1]");
@@ -39,10 +39,10 @@ public class RegisterPage extends BasePage {
 
 
     //SignUp
-    public void clickcookiesButton(){
-        LOG.info("Click cookies");
-        driver.findElement(cookiesButton).click();
-    }
+//    public void clickcookiesButton(){
+//        LOG.info("Click cookies");
+//        driver.findElement(cookiesButton).click();
+//    }
     public void clickContulMeuIcon() {
         LOG.info("Click the Contul meu Icon");
         driver.findElement(ContulMeuIcon).click();
@@ -52,7 +52,10 @@ public class RegisterPage extends BasePage {
         LOG.info("Type in Email Adress");
         driver.findElement(EmailField1).sendKeys(email1);
     }
-
+    public void clickMaiDeparteButton1() {
+        LOG.info("Click mai Departe Button");
+        driver.findElement(MaiDeparteButton1).click();
+    }
     public void typeInEmailField2(String email1) {
         LOG.info("Retype Email Adress");
         driver.findElement(EmailField2).sendKeys(email1);
@@ -88,29 +91,13 @@ public class RegisterPage extends BasePage {
         driver.findElement(PoliticaConfidentialitateCheckBox).click();
     }
 
-    public void clickMaiDeparteButton() {
-        LOG.info("Click mai Departe Button");
-        driver.findElement(MaiDeparteButton).click();
-    }
-
-
-    //LOG In
-
-    public void typeInEmailField(String email) {
-        LOG.info("Type in Email Adress");
-        driver.findElement(InputEmailField).sendKeys(email);
-    }
-
-
-    public void typeInPasswordField(String password) {
-        LOG.info("Type in Password Field");
-        driver.findElement(InputPasswordField).sendKeys(password);
-    }
-
     public void clickMaiDeparteButtonFinal() {
-        LOG.info("Click Mai Departe Button Final");
+        LOG.info("Click mai Departe ButtonFinal");
         driver.findElement(MaiDeparteButtonFinal).click();
     }
+
+
+
 
 
 }

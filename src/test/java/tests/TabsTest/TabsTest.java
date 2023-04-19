@@ -6,12 +6,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static pages.BasePage.getBaseUrl;
-
 
 public class TabsTest extends BaseTest {
     private static final Logger LOG = LoggerFactory.getLogger(tests.RegisterTest.RegisterTest.class);
-    private final String newUrl = getBaseUrl() + "Register.html";
+
 
     @Test
     public void Tabs() {
