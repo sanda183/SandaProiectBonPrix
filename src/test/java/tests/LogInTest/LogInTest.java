@@ -18,7 +18,7 @@ public class LogInTest extends BaseTest {
     @Test
     public void login() {
        LOG.info("Click Cookies Button");
-       logInPage.clickcookiesButton();
+      logInPage.clickcookiesButton();
 
         LOG.info("Click Contul Meu Icon");
         logInPage.clickContulMeuIcon();
@@ -35,6 +35,8 @@ public class LogInTest extends BaseTest {
         LOG.info("Click Mai Departe Button Final");
         logInPage.clickMaiDeparteButtonLogFinal();
 
+        LOG.info("Click Exit NewsLetter PopUp Button");
+        logInPage.clickExitNewsLetterPopUpButton();
 
     }
 }

@@ -2,15 +2,15 @@ package pages.Bascket;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
 
+import java.util.concurrent.TimeUnit;
+
 public class BascketPage extends BasePage {
     public static final Logger LOG = LoggerFactory.getLogger(BascketPage.class);
     public static BascketPage instance;
-    public WebElement typesearchProduct;
 
 
     private WebDriver driver;
@@ -44,44 +44,54 @@ public class BascketPage extends BasePage {
 
 
     public void clicksearchBar() {
+        WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
         LOG.info("Click the Search Bar");
-        driver.findElement(searchBar).click();
+        //driver.findElement(searchBar).click();
     }
 
-   public void searchProduct() {
-       LOG.info("Type product name");
-       driver.findElement(searchProduct).sendKeys("Geantă de pai");//produsul rezultat
-   }
+    public void typeInProductYouAreSearching() {
+        WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
+        LOG.info("Search a Product");
+        //driver.findElement(searchProduct).sendKeys("Geanta Pai" + Keys.ENTER);
+
+
+    }
 
     //Cart item
 
     public boolean IsSearchResultDisplayed() {
+        WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
         LOG.info("Verify if SearchResult is Displayed");
        return driver.findElement(SearchResult).isDisplayed();
     }
     public void clickItemGeantaPai() {
+        WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
         LOG.info("Click Geanta Pai");
-        driver.findElement(ItemGeantaPai).click();
+        //driver.findElement(ItemGeantaPai).click();
     }
 
     public void clickAdaugaInCosButton() {
+        WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
         LOG.info("Click Adauga in Cos Button");
-        driver.findElement(AdaugaInCosButton).click();
+        //driver.findElement(AdaugaInCosButton).click();
     }
 
     public void clickExitButton(){
+        WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
         LOG.info("Click exit Button");
-        driver.findElement(ExitButton).click();
+        //driver.findElement(ExitButton).click();
     }
 
     public void clickCartIcon() {
+        WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
         LOG.info("Click cart icon");
-        driver.findElement(CartIcon).click();
+        //driver.findElement(CartIcon).click();
     }
 
     public void clickTreciLaComandaButton() {
+        WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
         LOG.info("Click Treci la Comanda Button");
-        driver.findElement(TreciLaComandaButton).click();
+        //driver.findElement(TreciLaComandaButton).click();
     }
 
 

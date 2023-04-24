@@ -14,7 +14,7 @@ public class RegisterTest extends BaseTest {
     private String newUrl = getBaseUrl() + "/my-account/login/?step=register";
 
 
-    String email1 = "Sandutza183@icloud.com";
+    String email1 = "Sandutza183@gmail.com";
     String password = "18031990";
     String prenume = "Sanda";
     String nume = "Marincas";
@@ -57,8 +57,8 @@ public class RegisterTest extends BaseTest {
         LOG.info("Click the Politica Confidentialitate CheckBox");
         registerPage.clickPoliticaConfidentialitateCheckBox();
 
-        LOG.info("Click Mai Departe Button Final");
-        registerPage.clickMaiDeparteButtonFinal();
+        //LOG.info("Click Mai Departe Button Final");
+        //registerPage.clickMaiDeparteButtonFinal();
 
 
 

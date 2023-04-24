@@ -19,12 +19,11 @@ public class BascketTest extends BaseTest {
     public void cart() {
         driver.get(newUrl);
 
-
         LOG.info("Click the Search Bar");
         bascketPage.clicksearchBar();
 
-        LOG.info("Type in Product Name");
-        bascketPage.typesearchProduct.sendKeys(new CharSequence[]{"Geanta pai + Keys.ENTER"});
+        LOG.info("Type Search Product");
+        registerPage.typeInProductYouAreSearching();
 
         LOG.info("Check Search Result");
         Assert.assertTrue(BascketPage.getInstance().IsSearchResultDisplayed());

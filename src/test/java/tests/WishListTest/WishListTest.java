@@ -8,6 +8,7 @@ import tests.BaseTest;
 import static org.testng.Assert.assertTrue;
 import static pages.BasePage.driver;
 import static pages.BasePage.getBaseUrl;
+
 public class WishListTest extends BaseTest {
 
     private static final Logger LOG = LoggerFactory.getLogger(WishListTest.class);
@@ -18,13 +19,16 @@ public class WishListTest extends BaseTest {
 
     @Test
 
-    public void Login() {
-       driver.get(newUrl);
+    public void Wishlist() {
+        driver.get(newUrl);
+        LOG.info("Click Cookies");
+        wishListPage.clickcookiesButton();
+
         LOG.info("Click Contul Meu Icon");
         wishListPage.clickContulMeuIcon();
 
         LOG.info("Type In Email");
-        wishListPage.typeInEmailField(email);
+        wishListPage.typeInInputEmailField(email);
 
         LOG.info("Click Mai Departe Button");
         wishListPage.clickMaiDeparteButton();
@@ -35,6 +39,8 @@ public class WishListTest extends BaseTest {
         LOG.info("Click Mai Departe Button Final");
         wishListPage.clickMaiDeparteButtonLogFinal();
 
+        LOG.info("Click Exit NewsLetter PopUp Button");
+        wishListPage.clickExitNewsLetterPopUpButton();
 
         LOG.info("Click the Search Bar");
         wishListPage.clickSearchBar();
