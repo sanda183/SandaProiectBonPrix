@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static org.testng.Assert.assertTrue;
+import static pages.BasePage.driver;
 import static pages.BasePage.getBaseUrl;
 public class WishListTest extends BaseTest {
 
@@ -18,7 +19,7 @@ public class WishListTest extends BaseTest {
     @Test
 
     public void Login() {
-       //driver.get(newUrl);
+       driver.get(newUrl);
         LOG.info("Click Contul Meu Icon");
         wishListPage.clickContulMeuIcon();
 
@@ -32,21 +33,26 @@ public class WishListTest extends BaseTest {
         wishListPage.typeInPasswordField(password);
 
         LOG.info("Click Mai Departe Button Final");
-        wishListPage.clickMaiDeparteButtonFinal();
+        wishListPage.clickMaiDeparteButtonLogFinal();
 
-
-        LOG.info("Verify if Wishlist Section displayed");
-        assertTrue(wishListPage.isWishlistSectionDisplayedDisplayed());
 
         LOG.info("Click the Search Bar");
         wishListPage.clickSearchBar();
 
+        //LOG.info("Type in Product Name");
+        //wishListPage.typeInsearchProduct().sendKeys(new CharSequence{"Geanta pai" + Keys.ENTER}); //sendkeys nefunctional
+
+        LOG.info("clickItemGeantaPai");
+        wishListPage.clickItemGeantaPai();
+
+        LOG.info("clickAddToWishListHeartIcon");
+        wishListPage.clickAddToWishListHeartIcon();
 
         LOG.info("Click Wishlist Icon");
         wishListPage.clickWishlistIcon();
 
-        LOG.info("Click wishlist section");
-        wishListPage.clickWishlistsection();
+        LOG.info("Verify if Wishlist Section displayed");
+        assertTrue(wishListPage.isWishlistSectionDisplayedDisplayed());
 
 
     }

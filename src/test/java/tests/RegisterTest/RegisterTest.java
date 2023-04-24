@@ -11,7 +11,7 @@ import static pages.BasePage.getBaseUrl;
 public class RegisterTest extends BaseTest {
 
     private static final Logger LOG = LoggerFactory.getLogger(RegisterTest.class);
-    private String newUrl = getBaseUrl() + "Register.html";
+    private String newUrl = getBaseUrl() + "/my-account/login/?step=register";
 
 
     String email1 = "Sandutza183@icloud.com";

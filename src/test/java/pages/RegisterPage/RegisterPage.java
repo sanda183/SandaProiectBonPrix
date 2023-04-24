@@ -29,11 +29,11 @@ public class RegisterPage extends BasePage {
     private By PasswordField2 = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[4]/div[2]/div[1]/div[1]/div[1]/input[1]");
     private By NewsletterCheckBox = By.xpath("//div[@data-cy='login-form-register__newsletter-agreement']//em[@class='icon-check']");
     private By PoliticaConfidentialitateCheckBox = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[6]/label[1]/span[1]/em[1]");
-    private By MaiDeparteButton1 = By.xpath("//div[@class='login-logger__inner']//button[@id='submit-button']");
+    private By MaiDeparteButton1 = By.xpath("//form[@class='login-form-email']//span[@class='btn__slots'][normalize-space()='Mai departe']");
     private By InputEmailField = By.id("//input[@type='email']");
-    private By MaiDeparteButton = By.xpath("//form[@class='login-form-email']//span[@class='btn__slots'][normalize-space()='Mai departe']");
+    private By MaiDeparteButton = By.xpath("div[class='login-logger__inner'] div form[class='login-form-register'] span[class='btn__slots']");
     private By InputPasswordField = By.xpath("/html/body/div[1]/div/div/main/div/div[1]/div[2]/div/form/div[2]/div/div/div/input");
-    private By MaiDeparteButtonFinal = By.xpath("div[class='login-logger__inner'] div form[class='login-form-register'] span[class='btn__slots']");
+    private By MaiDeparteButtonFinal = By.xpath("//div[@class='login-logger__inner']//button[@id='submit-button']");
     private By searchBar = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//searchbar
     private By searchProduct = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//insertprodctsearch
 

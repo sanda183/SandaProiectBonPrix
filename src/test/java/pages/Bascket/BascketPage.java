@@ -11,6 +11,7 @@ public class BascketPage extends BasePage {
     public static BascketPage instance;
 
 
+
     private WebDriver driver;
 
 
@@ -26,11 +27,6 @@ public class BascketPage extends BasePage {
 
     }
 
-    private By ContulMeuIcon = By.xpath("//a[@aria-label='Contul meu']");
-    private By InputEmailField = By.xpath("//input[@type='email']");
-    private By MaiDeparteButton = By.xpath("//form[@class='login-form-email']//span[@class='btn__slots'][normalize-space()='Mai departe']");
-    private By InputPasswordField = By.xpath("/html/body/div[1]/div/div/main/div/div[1]/div[2]/div/form/div[2]/div/div/div/input");
-    private By MaiDeparteButtonFinal = By.xpath("div[class='login-logger__inner'] div form[class='login-form-register'] span[class='btn__slots']");
     private By searchBar = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//searchbar
     private By searchProduct = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//insertprodctsearch
     private By SearchResult = By.xpath("//*[@id=\"__layout\"]/div/div[11]/div/div/div[2]/div/div[1]/button");//search result page
@@ -39,35 +35,9 @@ public class BascketPage extends BasePage {
     private By ExitButton = By.xpath("//*[@id=\"__layout\"]/div/main/div/div[3]/div[12]/div/div[1]");//click exit
     private By CartIcon = By.xpath("//*[@id=\"__layout\"]/div/div[8]/div/div/div/div[1]/div/div/div[2]/a[2]/em");//carticon
     private By TreciLaComandaButton = By.xpath("//*[@id=\"app\"]/div[2]/div/div[4]/div[1]/div[2]/div/div[1]/div[3]/div[2]/form/button");//buton treci la  comanda
-    String email = "Marincassanda@yahoo.com";
-    String password = "18031990";
+
 
     //Log In My Account
-
-    public void clickContulMeuIcon() {
-        LOG.info("Click the Contul meu Icon");
-        driver.findElement(ContulMeuIcon).click();
-    }
-
-    public void typeInEmailField(String email) {
-        LOG.info("Type in Email Adress");
-        driver.findElement(InputEmailField).sendKeys(email);
-    }
-
-    public void clickMaiDeparteButton() {
-        LOG.info("Click Mai Departe Button");
-        driver.findElement(MaiDeparteButton).click();
-    }
-
-    public void typeInPasswordField(String password) {
-        LOG.info("Type in Password Field");
-        driver.findElement(InputPasswordField).sendKeys(password);
-    }
-
-    public void clickMaiDeparteButtonFinal() {
-        LOG.info("Click Mai Departe Button Final");
-        driver.findElement(MaiDeparteButtonFinal).click();
-    }
 
 //Search item and add to cart
 
@@ -77,10 +47,10 @@ public class BascketPage extends BasePage {
         driver.findElement(searchBar).click();
     }
 
-    public void typeProductNameSearch() {
-        LOG.info("Type product name");
-        driver.findElement(searchProduct).sendKeys("Geantă de pai");//produsul rezultat
-    }
+//    public void typesearchProduct() {
+//        LOG.info("Type product name");
+//        driver.findElement(searchProduct).sendKeys("Geantă de pai");//produsul rezultat
+//    }
 
     //Cart item
 

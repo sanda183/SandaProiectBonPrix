@@ -24,16 +24,16 @@ public class LogInTest extends BaseTest {
         logInPage.clickContulMeuIcon();
 
         LOG.info("Type In Email");
-        logInPage.typeInEmailField(email);
+        logInPage.typeInInputEmailField(email);
 
         LOG.info("Click Mai Departe Button1");
         logInPage.clickMaiDeparteButton();
 
         LOG.info("Type In Password");
-        logInPage.typeInPasswordField(password);
+        logInPage.typeInInputPasswordField(password);
 
         LOG.info("Click Mai Departe Button Final");
-        logInPage.clickMaiDeparteButtonFinal();
+        logInPage.clickMaiDeparteButtonLogFinal();
 
 
     }

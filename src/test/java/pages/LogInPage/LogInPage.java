@@ -24,7 +24,7 @@ public class LogInPage extends BasePage {
     }
 
     {
-        System.setProperty("webdriver.chrome.driver", "C:\\Webdriver\\chromedriver111.exe");
+        System.setProperty("webdriver.chrome.driver", "C://Webdriver/chromedriver112.exe.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.bonprix.ro/");
@@ -35,7 +35,7 @@ public class LogInPage extends BasePage {
     private By InputEmailField = By.id("//input[@type='email']");
     private By MaiDeparteButton = By.xpath("//form[@class='login-form-email']//span[@class='btn__slots'][normalize-space()='Mai departe']");
     private By InputPasswordField = By.xpath("/html/body/div[1]/div/div/main/div/div[1]/div[2]/div/form/div[2]/div/div/div/input");
-    private By MaiDeparteButtonFinal = By.xpath("div[class='login-logger__inner'] div form[class='login-form-register'] span[class='btn__slots']");
+    private By MaiDeparteButtonLogFinal = By.xpath("div[class='login-logger__inner'] div form[class='login-form-register'] span[class='btn__slots']");
 
 
 //    public void clickcookiesButton(){
@@ -47,7 +47,7 @@ public class LogInPage extends BasePage {
         driver.findElement(ContulMeuIcon).click();
     }
 
-    public void typeInEmailField(String email) {
+    public void typeInInputEmailField(String email) {
         LOG.info("Type in Email Adress");
         driver.findElement(InputEmailField).sendKeys(email);
     }
@@ -57,14 +57,14 @@ public class LogInPage extends BasePage {
         driver.findElement(MaiDeparteButton).click();
     }
 
-    public void typeInPasswordField(String password) {
+    public void typeInInputPasswordField(String password) {
         LOG.info("Type in Password Field");
         driver.findElement(InputPasswordField).sendKeys(password);
     }
 
-    public void clickMaiDeparteButtonFinal() {
+    public void clickMaiDeparteButtonLogFinal() {
         LOG.info("Click Mai Departe Button Final");
-        driver.findElement(MaiDeparteButtonFinal).click();
+        driver.findElement(MaiDeparteButtonLogFinal).click();
     }
 
 }
