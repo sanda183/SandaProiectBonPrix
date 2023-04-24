@@ -2,6 +2,7 @@ package pages.Bascket;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
@@ -9,7 +10,7 @@ import pages.BasePage;
 public class BascketPage extends BasePage {
     public static final Logger LOG = LoggerFactory.getLogger(BascketPage.class);
     public static BascketPage instance;
-
+    public WebElement typesearchProduct;
 
 
     private WebDriver driver;
@@ -47,10 +48,10 @@ public class BascketPage extends BasePage {
         driver.findElement(searchBar).click();
     }
 
-//    public void typesearchProduct() {
-//        LOG.info("Type product name");
-//        driver.findElement(searchProduct).sendKeys("Geantă de pai");//produsul rezultat
-//    }
+   public void searchProduct() {
+       LOG.info("Type product name");
+       driver.findElement(searchProduct).sendKeys("Geantă de pai");//produsul rezultat
+   }
 
     //Cart item
 

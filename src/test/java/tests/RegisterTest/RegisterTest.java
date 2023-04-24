@@ -24,8 +24,8 @@ public class RegisterTest extends BaseTest {
 
     @Test
     public void register() {
-//        LOG.info ("Click Cookies");
-//        registerPage.clickcookiesButton();
+        LOG.info ("Click Cookies");
+       registerPage.clickcookiesButton();
 
         LOG.info("Click Contul Meu Icon");
         registerPage.clickContulMeuIcon();

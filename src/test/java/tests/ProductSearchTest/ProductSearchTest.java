@@ -2,6 +2,7 @@ package tests.ProductSearchTest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static pages.BasePage.getBaseUrl;
@@ -13,12 +14,12 @@ public class ProductSearchTest extends BaseTest {
 
 
 
-//    @Test
-//    public void ProductSearch() {
-//
-//
-//      LOG.info("Type in Product You Are Searching for");
-//       productSearchPage.typeInProductYouAreSearching().sendKeys(new CharSequence[]{"Rochie" + Keys.ENTER});
-//
-//    }
+    @Test
+
+    public void productsearch(){
+
+      LOG.info("Type in Product You Are Searching for");
+       productSearchPage.typeInProductYouAreSearching();
+
+    }
 }

@@ -2,6 +2,9 @@ package pages.Wishlist;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
@@ -33,6 +36,7 @@ public class WishListPage extends BasePage {
     private By Wishlistsection = By.xpath("//a[@class='wishlist-item__name']");
     private By ItemGeantaPai = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/img[1]");
     private By AddToWishListHeartIcon = By.id("//*[@id=\"__layout\"]/div/main/div/div[3]/div[1]/div[2]/div[2]/div/div/div[4]/div/button");
+
     //Log In My Account
 
     public void clickContulMeuIcon() {
@@ -45,9 +49,14 @@ public class WishListPage extends BasePage {
         driver.findElement(InputEmailField).sendKeys(email);
     }
 
+
     public void clickMaiDeparteButton() {
         LOG.info("Click Mai Departe Button");
-        driver.findElement(MaiDeparteButton).click();
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Wait for a maximum of 10 seconds
+        WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(MaiDeparteButton));
+        clickableElement.click();
+
+        // driver.findElement(MaiDeparteButton).click();
     }
 
     public void typeInPasswordField(String password) {
@@ -65,10 +74,9 @@ public class WishListPage extends BasePage {
         driver.findElement(searchBar);
     }
 
-    public void typeInsearchProduct() {
-        LOG.info("Search a Product");
+    public void typeInSearchProduct() {
+        LOG.info("Type in search Product");
         driver.findElement(searchProduct).sendKeys(new CharSequence[]{"Geanta pai" + Keys.ENTER});
-
 
     }
 

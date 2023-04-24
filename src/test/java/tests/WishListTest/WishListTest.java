@@ -39,8 +39,8 @@ public class WishListTest extends BaseTest {
         LOG.info("Click the Search Bar");
         wishListPage.clickSearchBar();
 
-        //LOG.info("Type in Product Name");
-        //wishListPage.typeInsearchProduct().sendKeys(new CharSequence{"Geanta pai" + Keys.ENTER}); //sendkeys nefunctional
+        LOG.info("Type in Geanta Pai");
+        wishListPage.typeInSearchProduct();
 
         LOG.info("clickItemGeantaPai");
         wishListPage.clickItemGeantaPai();

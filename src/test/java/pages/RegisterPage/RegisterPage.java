@@ -19,7 +19,7 @@ public class RegisterPage extends BasePage {
         return instance;
     }
 
-    //private By cookiesButton = By.id("JOISH987_acceptAllBar_btn");
+    private By cookiesButton = By.xpath("//a[@id='JOISH987_acceptAllBar_btn']");
     private By ContulMeuIcon = By.xpath("//a[@aria-label='Contul meu']");
     private By EmailField1 = By.xpath("//input[@type='email']");
     private By EmailField2 = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/input[1]");
@@ -33,16 +33,17 @@ public class RegisterPage extends BasePage {
     private By InputEmailField = By.id("//input[@type='email']");
     private By MaiDeparteButton = By.xpath("div[class='login-logger__inner'] div form[class='login-form-register'] span[class='btn__slots']");
     private By InputPasswordField = By.xpath("/html/body/div[1]/div/div/main/div/div[1]/div[2]/div/form/div[2]/div/div/div/input");
-    private By MaiDeparteButtonFinal = By.xpath("//div[@class='login-logger__inner']//button[@id='submit-button']");
+    private By MaiDeparteButtonFinal = By.cssSelector("//div[@class='login-logger__inner']//button[@id='submit-button']");
     private By searchBar = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//searchbar
     private By searchProduct = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//insertprodctsearch
 
 
     //SignUp
-//    public void clickcookiesButton(){
-//        LOG.info("Click cookies");
-//        driver.findElement(cookiesButton).click();
-//    }
+    public void clickcookiesButton() {
+        LOG.info("Click cookies");
+        driver.findElement(cookiesButton).click();
+    }
+
     public void clickContulMeuIcon() {
         LOG.info("Click the Contul meu Icon");
         driver.findElement(ContulMeuIcon).click();
