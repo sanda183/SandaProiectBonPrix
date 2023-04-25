@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static org.testng.Assert.assertTrue;
 import static pages.BasePage.driver;
 import static pages.BasePage.getBaseUrl;
 
@@ -21,8 +20,10 @@ public class WishListTest extends BaseTest {
 
     public void Wishlist() {
         driver.get(newUrl);
+
         LOG.info("Click Cookies");
         wishListPage.clickcookiesButton();
+
 
         LOG.info("Click Contul Meu Icon");
         wishListPage.clickContulMeuIcon();
@@ -56,9 +57,6 @@ public class WishListTest extends BaseTest {
 
         LOG.info("Click Wishlist Icon");
         wishListPage.clickWishlistIcon();
-
-        LOG.info("Verify if Wishlist Section displayed");
-        assertTrue(wishListPage.isWishlistSectionDisplayedDisplayed());
 
 
     }

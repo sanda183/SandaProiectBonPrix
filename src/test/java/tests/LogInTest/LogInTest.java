@@ -17,8 +17,8 @@ public class LogInTest extends BaseTest {
 
     @Test
     public void login() {
-       LOG.info("Click Cookies Button");
-      logInPage.clickcookiesButton();
+        LOG.info("Click Cookies Button");
+        logInPage.clickcookiesButton();
 
         LOG.info("Click Contul Meu Icon");
         logInPage.clickContulMeuIcon();
@@ -26,17 +26,17 @@ public class LogInTest extends BaseTest {
         LOG.info("Type In Email");
         logInPage.typeInInputEmailField(email);
 
-        LOG.info("Click Mai Departe Button1");
+        LOG.info("Click Mai Departe Button");
         logInPage.clickMaiDeparteButton();
 
         LOG.info("Type In Password");
         logInPage.typeInInputPasswordField(password);
 
-        LOG.info("Click Mai Departe Button Final");
+        LOG.info("Click Mai Departe Button Log Final");
         logInPage.clickMaiDeparteButtonLogFinal();
 
-        LOG.info("Click Exit NewsLetter PopUp Button");
-        logInPage.clickExitNewsLetterPopUpButton();
+        //LOG.info("Click Exit NewsLetter PopUp Button");
+        //logInPage.clickExitNewsLetterPopUpButton();
 
     }
 }

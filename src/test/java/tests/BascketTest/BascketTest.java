@@ -11,16 +11,15 @@ import static pages.BasePage.driver;
 import static pages.BasePage.getBaseUrl;
 
 public class BascketTest extends BaseTest {
-    private static final Logger LOG = LoggerFactory.getLogger(tests.LogInTest.LogInTest.class);
+    private static final Logger LOG = LoggerFactory.getLogger(BascketTest.class);
     private String newUrl = getBaseUrl() + "/Cart/";
 
 
     @Test
     public void cart() {
         driver.get(newUrl);
-
-        LOG.info("Click the Search Bar");
-        bascketPage.clicksearchBar();
+        LOG.info ("Click Cookies");
+        registerPage.clickcookiesButton();
 
         LOG.info("Type Search Product");
         registerPage.typeInProductYouAreSearching();

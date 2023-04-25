@@ -28,7 +28,7 @@ public class BascketPage extends BasePage {
 
     }
 
-    private By searchBar = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//searchbar
+    private By cookiesButton = By.xpath("//a[@id='JOISH987_acceptAllBar_btn']");
     private By searchProduct = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//insertprodctsearch
     private By SearchResult = By.xpath("//*[@id=\"__layout\"]/div/div[11]/div/div/div[2]/div/div[1]/button");//search result page
     private By ItemGeantaPai = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/img[1]");//geantapai
@@ -38,16 +38,12 @@ public class BascketPage extends BasePage {
     private By TreciLaComandaButton = By.xpath("//*[@id=\"app\"]/div[2]/div/div[4]/div[1]/div[2]/div/div[1]/div[3]/div[2]/form/button");//buton treci la  comanda
 
 
-    //Log In My Account
+
 
 //Search item and add to cart
 
 
-    public void clicksearchBar() {
-        WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
-        LOG.info("Click the Search Bar");
-        //driver.findElement(searchBar).click();
-    }
+
 
     public void typeInProductYouAreSearching() {
         WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
@@ -56,7 +52,6 @@ public class BascketPage extends BasePage {
 
 
     }
-
     //Cart item
 
     public boolean IsSearchResultDisplayed() {

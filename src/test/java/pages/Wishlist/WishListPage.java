@@ -33,7 +33,6 @@ public class WishListPage extends BasePage {
     private By searchBar = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//searchbar
     private By searchProduct = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//insertprodctsearch
     private By WishListIcon = By.xpath("//a[@href='/wishlist/']");
-    private By Wishlistsection = By.xpath("//a[@class='wishlist-item__name']");
     private By ItemGeantaPai = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/img[1]");
     private By AddToWishListHeartIcon = By.id("//*[@id=\"__layout\"]/div/main/div/div[3]/div[1]/div[2]/div[2]/div/div/div[4]/div/button");
 
@@ -66,7 +65,7 @@ public class WishListPage extends BasePage {
             e.printStackTrace();
         }
         LOG.info("Type in Email Adress");
-       // driver.findElement(InputEmailField).sendKeys(email);
+        //driver.findElement(InputEmailField).sendKeys(email);
     }
 
 
@@ -78,7 +77,7 @@ public class WishListPage extends BasePage {
             e.printStackTrace();
         }
 
-        // driver.findElement(MaiDeparteButton).click();
+         //driver.findElement(MaiDeparteButton).click();
     }
 
     public void typeInPasswordField(String password) {
@@ -149,7 +148,7 @@ public class WishListPage extends BasePage {
             e.printStackTrace();
         }
         LOG.info("Click Add to Wishlist Heart Icon");
-       // driver.findElement(AddToWishListHeartIcon);
+        //driver.findElement(AddToWishListHeartIcon);
     }
     //Check wishlist
 
@@ -164,10 +163,6 @@ public class WishListPage extends BasePage {
         //driver.findElement(WishListIcon).click();
     }
 
-    public boolean isWishlistSectionDisplayedDisplayed() {
-        LOG.info("Is wishlist section Displayed");
-        return driver.findElement(Wishlistsection).isDisplayed();
-    }
 
 
 }

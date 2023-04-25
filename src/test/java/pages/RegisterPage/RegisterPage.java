@@ -1,6 +1,7 @@
 package pages.RegisterPage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,7 +40,7 @@ public class RegisterPage extends BasePage {
     private By MaiDeparteButtonFinal = By.xpath("//div[@class='login-logger__inner']//button[@id='submit-button']");
     private By searchBar = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//searchbar
     private By searchProduct = By.xpath("//div[@class='header__search']//div//input[@name='searchText']");//insertprodctsearch
-
+    private By ExitNewsLetterPopUpButton = By.cssSelector("//*[@id=\"__layout\"]/div/div[11]/div/div/div[2]/div/div[1]/button");
 
     //SignUp
     public void clickcookiesButton() {
@@ -117,11 +118,26 @@ public class RegisterPage extends BasePage {
     public void typeInProductYouAreSearching() {
         WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
         LOG.info("Search a Product");
-        //driver.findElement(searchProduct).sendKeys("Geanta Pai" + Keys.ENTER);
+        driver.findElement(searchProduct).sendKeys("Geanta Pai" + Keys.ENTER);
 
 
     }
+    public void clicksearchBar() {
+        WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
+        LOG.info("Click the Search Bar");
+        driver.findElement(searchBar).click();
+    }
+    public void clickExitNewsLetterPopUpButton() {
+        try {
+            Thread.sleep(3000); // Pause for 3 seconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        LOG.info("Click Exist NewsLetter PopUp Button");
+        driver.findElement(ExitNewsLetterPopUpButton);
+    }
 }
+
 
 
 
