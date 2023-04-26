@@ -2,7 +2,6 @@ package tests;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import pages.Bascket.BascketPage;
 import pages.BasePage;
 import pages.LogInPage.LogInPage;
 import pages.ProductSearch.ProductSearchPage;
@@ -18,7 +17,7 @@ public class BaseTest {
     public TabsPage tabsPage = TabsPage.getInstance();
     public ProductSearchPage productSearchPage = ProductSearchPage.getInstance();
     public WishListPage wishListPage = WishListPage.getInstance();
-    public BascketPage bascketPage = BascketPage.getInstance();
+
 
 
 
