@@ -17,7 +17,6 @@ public class WishListPage extends BasePage {
         if (instance == null) {
             instance = new pages.Wishlist.WishListPage();
         }
-        final WishListPage instance = WishListPage.instance;
         return instance;
 
     }
